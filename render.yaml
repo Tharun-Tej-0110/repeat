@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: telegram-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        fromSecret: telegram_bot_token
